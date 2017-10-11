@@ -1,0 +1,172 @@
+<md-sidenav-container>
+    <ng2-slim-loading-bar></ng2-slim-loading-bar>
+    <ng2-toasty [position]="toastyComponentPosition"></ng2-toasty>
+    <md-toolbar color="primary">
+        <button md-icon-button (click)="sidenav.toggle()">
+        <md-icon class="md-24" >menu</md-icon>
+      </button> {{ 'APPLICATION_NAME' | translate }}
+
+        <span class="fill-remaining-space"></span>
+            
+            <div *ngIf="edited">
+            <md-input-container class="search-text-box-class" flex>
+                <input mdInput placeholder="">
+                <button md-icon-button mdPrefix><md-icon>search</md-icon></button>
+            </md-input-container>
+            </div>
+            <button md-icon-button (click)="homeButtonClick()">
+                <md-icon class="md-24" >home</md-icon>
+            </button>
+
+            <button md-icon-button [mdMenuTriggerFor]="appsButton" (click)="voidButtonClick()">
+            <md-icon class="md-24" >apps</md-icon>
+        </button>
+
+            <md-menu #appsButton="mdMenu" [overlapTrigger]="false">
+            </md-menu>
+
+            <button md-icon-button [mdMenuTriggerFor]="notificationsButton" (click)="voidButtonClick()">
+            <md-icon class="md-24" >notifications</md-icon>
+        </button>
+
+            <md-menu #notificationsButton="mdMenu" [overlapTrigger]="false">
+                <button md-menu-item>
+              <md-icon> dialpad </md-icon>
+              <span> Redial </span>
+            </button>
+                <button md-menu-item disabled>
+              <md-icon> voicemail </md-icon>
+              <span> Check voicemail </span>
+            </button>
+                <button md-menu-item>
+              <md-icon> notifications_off </md-icon>
+              <span> Disable alerts </span>
+            </button>
+            </md-menu>
+
+            <button md-icon-button [mdMenuTriggerFor]="infoButton" (click)="voidButtonClick()">
+            <md-icon class="md-24" >info</md-icon>
+        </button>
+            <md-menu #infoButton="mdMenu" [overlapTrigger]="false">
+            </md-menu>
+
+            <button md-icon-button [mdMenuTriggerFor]="profileButton" (click)="voidButtonClick()">
+            <md-icon class="md-24" >account_circle</md-icon>
+        </button>
+
+            <md-menu #profileButton="mdMenu" [overlapTrigger]="false">
+                <ul class="nav nav-sidebar">
+                    <li *ngFor="let lang of languages" (click)="changeLanguage(lang)">
+                        <a href="javascript:void(0)">{{ lang }}</a>
+                    </li>
+                </ul>
+            </md-menu>
+           
+            <md-icon class="md-24" >account_circle</md-icon>
+            <button md-button>New Registration</button>
+    </md-toolbar>
+
+
+
+    <md-sidenav #sidenav class="example-sidenav" opened="false">
+
+        <md-nav-list>
+            <a md-list-item (click)="sidenav.close()" [routerLink]="['/home']">
+                <md-icon md-list-icon>home</md-icon>
+                <span md-line>{{ 'HOME' | translate }}</span>
+                <span md-line class="secondary">{{ 'HOME' | translate }}</span>
+            </a>
+            <a md-list-item (click)="sidenav.close()" [routerLink]="['/about']">
+                <md-icon md-list-icon>list</md-icon>
+                <span md-line>{{ 'ABOUT' | translate }}</span>
+                <span md-line class="secondary">{{ 'ABOUT' | translate }}</span>
+            </a>
+            <a md-list-item (click)="sidenav.close()" [routerLink]="['/_/github', 'angular']">
+                <md-icon md-list-icon>bookmark</md-icon>
+                <span md-line>{{ 'GITHUB_REPOS' | translate }}</span>
+                <span md-line class="secondary">{{ 'GITHUB_REPOS' | translate }}</span>
+            </a>
+            <a md-list-item (click)="sidenav.close()" [routerLink]="['/contact']">
+                <md-icon md-list-icon>question_answer</md-icon>
+                <span md-line>{{ 'CONTACT_US' | translate }}</span>
+                <span md-line class="secondary">{{ 'CONTACT_US' | translate }}</span>
+            </a>
+            <a md-list-item (click)="sidenav.close()" [routerLink]="['/content-provider']">
+                <md-icon md-list-icon>question_answer</md-icon>
+                <span md-line>{{ 'Content-provider' | translate }}</span>
+                <span md-line class="secondary">{{ 'Content-provider' | translate }}</span>
+            </a>
+        </md-nav-list>
+
+    </md-sidenav>
+
+    <div class="site">
+        <main class="content">            
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+
+    <footer>
+        <div class="mat-toolbar-custom-div">
+            <div class="mat-toolbar-row-custom-div">
+                <span>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Application
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Department
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Ministry
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                            Government
+                            </a>
+                        </li>
+                    </ul>
+                </span>
+                <span class="fill-remaining-space"></span>
+                <span>
+                    <ul>
+                        <li>
+                            <a href="https://www.pwc.com/lk/en.html"> &copy; {{currentDate | date: 'yyyy'}} PwC Sri Lanka</a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+            <div class="mat-toolbar-row-custom-div">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Citizen Application
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            External Department Application
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Internal Department Application
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            Admin Application
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</md-sidenav-container>
