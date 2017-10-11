@@ -92,14 +92,14 @@ div textarea {
 
 #check1{
 
-    top: 3px;
+    margin-top: 5px;
     width: 15px;
     height: 15px;
 }
 
 #check2{
     
-        top: 3px;
+        margin-top: 5px;
         width: 15px;
         height: 15px;
     }
