@@ -69,12 +69,12 @@
         <input id="cpDesignation" name="cpDesignation" class="form-control form-control-sm" type="text" placeholder="Designation:">
     </div>
 
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-6">
     <div class="row">
-            <div class="col-md-5 col-sm-5" style="top: 15px;right: 4px;">
+            <div id="label_dob" class="col-md-5" style="margin-top: 10px; padding-left: 4px;">
                 Date of birth:
             </div>
-            <div class="col-md-7 col-sm-7">
+            <div id="dob" class="col-md-7" style="padding-right:0px;">
             <input type="text" id="cpDob" name="cpDob" class="form-control form-control-sm">
             </div>
         </div>
@@ -97,8 +97,8 @@
         <h6>&emsp;Highest education level achieved,</h6>
     </div>
     &emsp;
-    <div class="row">
-    <div class="col-md-3">
+    <div class="row" style="width:100%;">
+    <div class="col-lg-3">
         <div class="row">
             <label>Qualification Achieved</label>
         </div>
@@ -107,7 +107,7 @@
         </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-lg-3">
         <div class="row">
             <label>University / Institute</label>
         </div>
@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-lg-2">
         <div class="row">
             <label>Grade recieved</label>
         </div>
@@ -125,13 +125,13 @@
         </div>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-lg-2">
         <div class="row">
             <label>Country</label>
         </div>
         <div class="row">
             <!-- <?php echo $select_country1; ?> -->
-            <select>
+            <select class="form-control form-control-sm" style="margin-top: 7px; width:100%;">
                 <option>Sri Lanka</option>
                 <option>India</option>
                 <option>England</option>
@@ -159,7 +159,7 @@
             }               
             echo '</select>';
         ?> -->
-        <select>
+        <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
             <option>2017</option>
             <option>2016</option>
             <option>2015</option>
@@ -179,12 +179,12 @@
     </div>
             
     <div class="col-lg-2">
-        <div class="row">
+        <div class="row" style="width:100%;">
             <label>Qualification achieved</label>
         </div>
         <div class="row">
             <!-- <?php echo $select3; ?> -->
-            <select>
+            <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                 <option>CIMA</option>
                 <option>SLIIT</option>
                 <option>NSBM</option>
@@ -207,7 +207,7 @@
         </div>
         <div class="row">
             <!-- <?php echo $select4; ?> -->
-            <select>
+            <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                 <option>First class</option>
                 <option>Second Upper</option>
                 <option>Second Lower</option>
@@ -234,7 +234,7 @@
                 }               
                 echo '</select>';
             ?> -->
-            <select>
+            <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                 <option>2017</option>
                 <option>2016</option>
                 <option>2015</option>
@@ -248,7 +248,7 @@
         </div>
         <div class="row">
             <!-- <?php echo $select_country2; ?> -->
-            <select>
+            <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                 <option>Sri Lanka</option>
                 <option>India</option>
                 <option>England</option>
@@ -261,7 +261,7 @@
             
         </div>
         <div class="row">
-            <button id="add_btn_row1" type="button" class="btn btn-info" style="margin-top: 33px;">+</button>
+            <button id="add_btn_row1" type="button" (click)="show_row2()" class="btn btn-info" style="margin-top: 33px;">+</button>
         </div>
     </div>
             
@@ -270,7 +270,7 @@
         <div class="col-lg-2">
             <div class="row">
                 <!-- <?php echo $select7; ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>CIMA</option>
                     <option>SLIIT</option>
                     <option>NSBM</option>
@@ -287,7 +287,7 @@
         <div class="col-lg-2">
             <div class="row">
                 <!-- <?php echo $select8; ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>First class</option>
                     <option>Second Upper</option>
                     <option>Second Lower</option>
@@ -311,7 +311,7 @@
                     }               
                     echo '</select>';
                 ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>2017</option>
                     <option>2016</option>
                     <option>2015</option>
@@ -322,7 +322,7 @@
         <div class="col-lg-2">
             <div class="row">
                 <!-- <?php echo $select_country9; ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>Sri Lanka</option>
                     <option>India</option>
                     <option>England</option>
@@ -330,10 +330,10 @@
             </div>
         </div>
 
-        <div class="col-lg-1">
+        <div class="col-lg-1" style="padding-left: 0px;padding-right: 0px;">
             <div class="row">
-                <button id="remove_btn_row2" type="button" class="btn btn-info" style="">-</button>
-                <button id="add_btn_row2" type="button" class="btn btn-info" style="margin-left: 4px;width: 33.979166px;">+</button>
+                <button id="remove_btn_row2" (click)="hide_row2()"type="button" class="btn btn-info" style="">-</button>
+                <button id="add_btn_row2" (click)="show_row3()" type="button" class="btn btn-info" style="margin-left: 3px;width: 33.979166px;border-left-width: 0px;">+</button>
             </div>
         </div>
     </div>
@@ -343,7 +343,7 @@
         <div class="col-lg-2">
             <div class="row">
                 <!-- <?php echo $select10; ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>CIMA</option>
                     <option>SLIIT</option>
                     <option>NSBM</option>
@@ -360,7 +360,7 @@
         <div class="col-lg-2">
             <div class="row">
                 <!-- <?php echo $select11; ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>First class</option>
                     <option>Second Upper</option>
                     <option>Second Lower</option>
@@ -384,7 +384,7 @@
                     }               
                     echo '</select>';
                 ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>2017</option>
                     <option>2016</option>
                     <option>2015</option>
@@ -395,7 +395,7 @@
         <div class="col-lg-2">
             <div class="row">
                 <!-- <?php echo $select_country12; ?> -->
-                <select>
+                <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
                     <option>Sri Lanka</option>
                     <option>India</option>
                     <option>England</option>
@@ -403,9 +403,9 @@
             </div>
         </div>
 
-        <div class="col-lg-1">
+        <div class="col-lg-1" style="padding-left: 0px;padding-right: 0px;">
             <div class="row">
-                <button id="remove_btn_row3" type="button" class="btn btn-info" style="">-</button>
+                <button id="remove_btn_row3" type="button" (click)="hide_row3()" class="btn btn-info" style="">-</button>
                 <!--<button id="add_btn_row3" type="button" class="btn btn-info" style="">-</button>-->
             </div>
         </div>
@@ -418,37 +418,42 @@
     <br>
     <!--expertise subject-->
     <!--Subject fo areas expertise-->
+    <div class="row" style="width:100%;">
     <div class="col-lg-3" style="padding-right: 0px;padding-left: 15px;margin-top: 8px;">
         <h6>&emsp;Subject Area of Expertise: </h6>
     </div>
+
     <div class="col-lg-3">
         <!-- <?php echo $select_subject1; ?> -->
-        <select>
+        <select class="form-control form-control-sm" style="margin-top: 7px; width:100%">
             <option>Management</option>
             <option>IT</option>
             <option>Science</option>
         </select>
-        <button id="add_subject_btn1" type="button" class="btn btn-info" style="margin-top: 0px;">+</button>
+        <button id="add_subject_btn1" type="button" (click)="add_subject2()" class="btn btn-info" style="margin-top: 5px; float:right;">+</button>
     </div>
+
     <div class="col-lg-3">
         <!-- <?php echo $select_subject2; ?> -->
-        <select>
+        <select id="expert_subject2" class="form-control form-control-sm" style="margin-top: 7px; width:100%; display:none;">
             <option>Management</option>
             <option>IT</option>
             <option>Science</option>
         </select>
-        <button id="add_subject_btn2" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">+</button>
-        <button name="remove_subject_btn2" id="remove_subject_btn2" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">-</button>
+        <button name="remove_subject_btn2" id="remove_subject_btn2" type="button" (click)="remove_subject2()" class="btn btn-info" style="margin-top: 5px;float: right;width: 35.979166px; display:none;">-</button>
+        <button id="add_subject_btn2" type="button" (click)="add_subject3()" class="btn btn-info" style="margin-top: 5px; margin-right:5px; float:right; display:none;">+</button>
     </div>
+
     <div class="col-lg-3">
         <!-- <?php echo $select_subject3; ?> -->
-        <select>
+        <select id="expert_subject3" class="form-control form-control-sm" style="margin-top: 7px; width:100%; display:none;">
             <option>Management</option>
             <option>IT</option>
             <option>Science</option>
         </select>
         <button id="add_subject_btn3" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">+</button>
-        <button name="remove_subject_btn3" id="remove_subject_btn3" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">-</button>
+        <button name="remove_subject_btn3" id="remove_subject_btn3" type="button" (click)="remove_subject3()" class="btn btn-info" style="margin-top: 5px; width:35.979166px; display:none; float:right;">-</button>
+    </div>
     </div>
 
     <div class="col-lg-12">
@@ -457,40 +462,53 @@
 
 
     <br><br>
+    <div class="row" style="width:100%;">
     <!--Area you representing an institute / Professional body-->
     <div class="col-lg-6">
         <h6>&emsp;Area you representing an institute / Professional body: </h6>
     </div>
-    <div class="col-lg-2" style="margin-top: 6px;">
-        &emsp;<input class="form-check-input" type="radio" name="radio-btn3" value="1" id="radio-btn3" style="margin-top: 7px;"><span>&emsp;Yes</span>  
+    <div id="yes_btn_1" class="col-lg-2" style="margin-top: 6px;">
+        &emsp;<input class="form-check-input" type="radio" name="radio-btn3" value="1" id="radio-btn3" style="margin-top: 7px;" (click)="show_course()"><span>&emsp;Yes</span>  
     </div>
-    <div class="col-lg-2" style="margin-top: 6px;">
-        &emsp;<input class="form-check-input" type="radio" name="radio-btn3" value="0" id="radio-btn4" style="margin-top: 7px;" checked><span>&emsp;No</span>
+    <div id="no_btn_1" class="col-lg-2" style="margin-top: 6px;">
+        &emsp;<input class="form-check-input" type="radio" name="radio-btn3" value="0" id="radio-btn4" style="margin-top: 7px;" (click)="hide_course()" checked><span>&emsp;No</span>
     </div>
     <div class="col-lg-2">
         <!-- <?php echo $select6; ?> -->
+        <select id="courses" class="form-control form-control-sm" (change)="show_other_institute()" style="margin-top:7px; width:100%; display:none;">
+            <option value="CIMA">CIMA</option>
+            <option value="SLIIT">SLIIT</option>
+            <option value="NSBM">NSBM</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
     </div>
 
-    <div class="col-lg-3" id="other-field1" style="display:none;">
+    <div class="row" style="width:100%;">
+    <div class="col-lg-4" id="other-field1" style="display:none;">
         <h6 style="margin-top:13px;">&emsp;If other, please specify:</h6>
     </div>
     <div class="col-lg-4" id="other-field" style="display:none;">
         <input id="other-details" name="other-details" class="form-control form-control-sm" type="text">
     </div>
-    <div class="col-lg-5"></div>
+    <div class="col-lg-4"></div>
+    </div>
 
     <div class="col-lg-12">
         <hr>
     </div>
 
     <!--Content Provider Identification No:-->
-    <div class="col-lg-3" style="margin-top: 7px;">
+    <div class="row" style="width:100%;">
+    <div class="col-lg-4" style="margin-top: 7px;">
         <h6>&emsp;Content Provider Identification No:</h6>
     </div>
     <div class="col-lg-4">
         <!-- <input name="cpId" id="cpId" class="form-control form-control-sm" type="text" value="<?php echo $cp_id; ?>" readonly><br> -->
+        <input id="cpId" name="cpId" class="form-control form-control-sm" type="text" readonly>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-4">
+    </div>
     </div>
 
     <div class="col-lg-12">
@@ -508,12 +526,14 @@
         <br><br><br>
     </div>
 
+    <div id="form1_submit_row" class="row" style="width:100%;">
     <div class="col-lg-9">
         <!-- <input type="text" id="count_new" name="count_new" value="<?php echo $count_new; ?>" style="display:none;"> -->
     </div>
     <div class="col-lg-3">
         <button type="submit" id="cancel1" name="cancel1" class="btn btn-primary">Cancel</button>&emsp;
         <button type="submit" id="submit1" name="submit1" class="btn btn-primary">Submit</button><br><br><br><br>
+    </div>
     </div>
         
     </div><!--end of individual form-->
@@ -567,6 +587,7 @@
         </div>
         <div class="col-lg-6">
             <!-- <input id="instId" name="instId" class="form-control form-control-sm" type="text" value="<?php echo $cp_inst_id; ?>" readonly> -->
+            <input id="instId" name="instId" class="form-control form-control-sm" type="text" readonly>
         </div>
     </div> 
     </div>
@@ -585,32 +606,32 @@
     </div>
     <div class="col-lg-3">
         <!-- <?php echo $select_sub1; ?> -->
-        <select>
+        <select id="expert_sub1" class="form-control form-control-sm" type="text">
             <option>Management</option>
             <option>IT</option>
             <option>Science</option>
         </select>
-        <button id="add_sub_btn1" type="button" class="btn btn-info" style="margin-top: 0px;">+</button>
+        <button id="add_sub_btn1" type="button" class="btn btn-info" (click)="add_expert_sub2()" style="margin-top: 5px; float:right;">+</button>
     </div>
     <div class="col-lg-3">
         <!-- <?php echo $select_sub2; ?> -->
-        <select>
+        <select id="expert_sub2" class="form-control form-control-sm" type="text" style="display:none;">
             <option>Management</option>
             <option>IT</option>
             <option>Science</option>
         </select>
-        <button id="add_sub_btn2" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">+</button>
-        <button name="remove_sub_btn2" id="remove_sub_btn2" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">-</button>
+        <button id="add_sub_btn2" type="button" class="btn btn-info" (click)="add_expert_sub3()" style="margin-top:5px; float:right; display:none;">+</button>
+        <button name="remove_sub_btn2" id="remove_sub_btn2" type="button" class="btn btn-info" (click)="remove_expert_sub2()" style="margin-top:5px; width: 35.979166px; margin-right:5px; float:right; display:none;">-</button>
     </div>
     <div class="col-lg-3">
         <!-- <?php echo $select_sub3; ?> -->
-        <select>
+        <select id="expert_sub3" class="form-control form-control-sm" type="text" style="display:none;">
             <option>Management</option>
             <option>IT</option>
             <option>Science</option>
         </select>
         <button id="add_sub_btn3" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">+</button>
-        <button name="remove_sub_btn3" id="remove_sub_btn3" type="button" class="btn btn-info" style="margin-top: 0px; display:none;">-</button>
+        <button name="remove_sub_btn3" id="remove_sub_btn3" type="button" class="btn btn-info" (click)="remove_expert_sub3()" style="margin-top:5px; width: 35.979166px; float:right; display:none;">-</button>
     </div>
     </div>
 
