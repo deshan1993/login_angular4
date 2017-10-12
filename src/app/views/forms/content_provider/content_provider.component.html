@@ -75,7 +75,7 @@
                 Date of birth:
             </div>
             <div id="dob" class="col-md-7" style="padding-right:0px;">
-            <input type="text" id="cpDob" name="cpDob" class="form-control form-control-sm">
+            <input type="text" id="cpDob" name="cpDob" class="form-control form-control-sm" (click)="show_datepicker1()">
             </div>
         </div>
     </div>
@@ -100,7 +100,7 @@
     <div class="row" style="width:100%;">
     <div class="col-lg-3">
         <div class="row">
-            <label>Qualification Achieved</label>
+            <label id="label1" >Qualification Achieved</label>
         </div>
         <div class="row">
             <input id="highest_quali" name="highest_quali" class="form-control form-control-sm" style="width:100%;" type="text">
@@ -109,7 +109,7 @@
 
     <div class="col-lg-3">
         <div class="row">
-            <label>University / Institute</label>
+            <label id="label2" >University / Institute</label>
         </div>
         <div class="row">
             <input id="highest_uni" name="highest_uni" class="form-control form-control-sm" type="text">
@@ -118,7 +118,7 @@
 
     <div class="col-lg-2">
         <div class="row">
-            <label>Grade recieved</label>
+            <label id="label3" >Grade recieved</label>
         </div>
         <div class="row">
             <input id="highest_grade" name="highest_grade" class="form-control form-control-sm" type="text">
@@ -127,7 +127,7 @@
 
     <div class="col-lg-2">
         <div class="row">
-            <label>Country</label>
+            <label id="label4" >Country</label>
         </div>
         <div class="row">
             <!-- <?php echo $select_country1; ?> -->
@@ -141,7 +141,7 @@
 
     <div class="col-md-2">
         <div class="row">
-            <label>Year of completion</label>
+            <label id="label5" >Year of completion</label>
         </div>
         <div class="row">
         <!-- <?php
@@ -180,7 +180,7 @@
             
     <div class="col-lg-2">
         <div class="row" style="width:100%;">
-            <label>Qualification achieved</label>
+            <label id="label6">Qualification achieved</label>
         </div>
         <div class="row">
             <!-- <?php echo $select3; ?> -->
@@ -194,7 +194,7 @@
 
     <div class="col-lg-3">
         <div class="row">
-            <label>University / Institute</label>
+            <label id="label7">University / Institute</label>
         </div>
         <div class="row">
             <input id="uniName_row0" name="uniName_row[0]" class="form-control form-control-sm" type="text">
@@ -203,7 +203,7 @@
 
     <div class="col-lg-2">
         <div class="row">
-            <label>Grade recieved</label>
+            <label id="label8">Grade recieved</label>
         </div>
         <div class="row">
             <!-- <?php echo $select4; ?> -->
@@ -217,7 +217,7 @@
 
     <div class="col-lg-2">
         <div class="row">
-            <label>Year of completion</label>
+            <label id="label9">Year of completion</label>
         </div>
         <div class="row">
             <!-- <?php
@@ -244,7 +244,7 @@
 
     <div class="col-lg-2">
         <div class="row">
-            <label>Country</label>
+            <label id="label10">Country</label>
         </div>
         <div class="row">
             <!-- <?php echo $select_country2; ?> -->
@@ -555,10 +555,10 @@
 
     <div class="col-lg-6">
     <div class="row">
-        <div class="col-lg-6" style="margin-top: 13px;">
+        <div class="col-lg-6" style="margin-top: 10px; padding-left: 4px;">
             Date of Registration:
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="padding-right:0px;">
         <input type="text" id="dateOfReg" name="dateOfReg" class="form-control form-control-sm" placeholder="Date of Registration:">
         </div>
     </div>    
@@ -582,10 +582,10 @@
 
     <div class="col-lg-6">
     <div class="row">
-        <div class="col-lg-6" style="margin-top: 13px;">
+        <div class="col-lg-6" style="margin-top: 10px; padding-left: 4px;">
             Content Provider Identification No:
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="padding-right:0px;">
             <!-- <input id="instId" name="instId" class="form-control form-control-sm" type="text" value="<?php echo $cp_inst_id; ?>" readonly> -->
             <input id="instId" name="instId" class="form-control form-control-sm" type="text" readonly>
         </div>

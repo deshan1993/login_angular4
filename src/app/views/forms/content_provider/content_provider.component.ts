@@ -152,10 +152,12 @@ export class Content_providerComponent{
     }
 
     //show datepicker format
-    show_date_format(){
-        $( "#cpDob" ).datepicker({
-            dateFormat: 'yy-mm-dd'
-            });
-    }
+    show_datepicker1(){
+        $("#cpDob").datepicker(this.newFunction());
+    }  
 
+    public newFunction(): any {
+        return { dateFormat: 'yy-mm-dd' };
+    }
 }
+
