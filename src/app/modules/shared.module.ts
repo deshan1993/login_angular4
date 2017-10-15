@@ -7,9 +7,6 @@ import { MaterialModule, MdDatepickerModule, MdNativeDateModule } from '@angular
 
 import { HttpModule, Http,XHRBackend,RequestOptions } from '@angular/http';
 
-import { HighlightDirective }  from '../directives/highlight.directive';
-
-
 
 @NgModule({
   imports:      [ 
@@ -20,12 +17,9 @@ import { HighlightDirective }  from '../directives/highlight.directive';
     MdNativeDateModule
   ],
   declarations: [ 
-    HighlightDirective
  ],
   exports:      [ 
-    HighlightDirective,
     CommonModule, 
-    HighlightDirective,
     HttpModule,
     TranslateModule,
     MaterialModule 

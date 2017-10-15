@@ -12,6 +12,7 @@ declare var jQuery: any;
 
 export class Content_providerComponent{
     hide1 = 'true';
+    
  
 //to show educational institution registration form
     tabChangeToCompany(){
@@ -152,12 +153,12 @@ export class Content_providerComponent{
     }
 
     //show datepicker format
-    show_datepicker1(){
-        $("#cpDob").datepicker(this.newFunction());
-    }  
+    // show_datepicker1(){
+    //     $("#cpDob").datepicker(this.newFunction());
+    // }  
 
-    public newFunction(): any {
-        return { dateFormat: 'yy-mm-dd' };
-    }
+    // public newFunction(): any {
+    //     return { dateFormat: 'yy-mm-dd' };
+    // }
 }
 

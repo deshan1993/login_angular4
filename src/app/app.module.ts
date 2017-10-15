@@ -33,7 +33,7 @@ import { AboutComponent } from './views/pages/core/about/about.component';
 import { HomeComponent } from './views/pages/core/home/home.component';
 import { ContactComponent } from './views/pages/core/contact/contact.component';
 import { UserDashboardComponent } from './views/pages/core/userdashboard/userdashboard.component';
-import { ContentComponent } from './views/pages/core/content_provider/content.component';
+
 
 import { Content_providerComponent} from './views/forms/content_provider/content_provider.component';
 
@@ -51,6 +51,7 @@ import { DataTableComponent } from './views/widgets/widget/data-table/data-table
 import 'hammerjs';
 // d3 and nvd3 should be included somewhere
 import 'd3';
+import { ContentProviderComponent } from './views/pages/core/content-provider/create-content-provider/content-provider.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -70,8 +71,8 @@ export function startupServiceFactory(startupService: StartupService): Function 
     ContactComponent,
     DataTableComponent,
     UserDashboardComponent,
-    ContentComponent,
-    Content_providerComponent
+    ContentProviderComponent,
+    Content_providerComponent,
   ],
   imports: [
     BrowserModule,
